@@ -1995,8 +1995,8 @@ Soit $X$ une surface de Riemann connexe non compacte.
   critiques de $f$ est de mesure nulle. On en déduit que l'ensemble des valeurs
   critiques de $chi$, qui est une réunion finie de sous-ensembles de $[0, 1]$ de mesure nulle, est également
   de mesure nulle. On se donne donc $0 < c < 1$ une valeur régulière de $chi$.
-  Alors, $P := chi^(-1)([c, +infinity[)$ est une pièce de $X$ par inversion locale,
-  contenant $K$ dans son intérieur. Il suffit de remplir $P$ et d'appliquer le
+  Alors, la composante connexe de $chi^(-1)([c, +infinity[)$ qui contient $K$ est une pièce de $X$ 
+  par inversion locale, contenant $K$ dans son intérieur. Il suffit de remplir $P$ et d'appliquer le
   @thRemplissagePieceEstPleine pour conclure.
 ]
 
