@@ -694,6 +694,8 @@ On note $ psi : DD^(*) --> RR, quad z arrow.r.long.bar - ln abs(z) $
   $
     psi : DD(R) arrowTildeLong DD(R), quad z arrow.r.long.bar (R^(2)(z + a))/(R^(2) + overline(a)z) = R psi_(-a)(z / R).
   $
+  La fonction $psi_(-a)$ est définie à la @secSchwarzPick, et on y montre que c'est un automorphisme de $DD$ qui envoie $0$ sur $a$.
+  Cela conclut la preuve.
 ]
 
 == Fonctions (sous)harmoniques sur une surface de Riemann
