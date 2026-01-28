@@ -1,8 +1,5 @@
 #import "lib/lib.typ": *
 
-// Uniformisation des notations
-// Coquilles
-
 #show: mathdoc.with(
   title: [Fonctions harmoniques\ ---\ Théorème de Radó et  Uniformisation],
   author: "Dorian Boully",
