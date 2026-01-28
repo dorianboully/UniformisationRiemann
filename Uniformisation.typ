@@ -692,10 +692,10 @@ On note $ psi : DD^(*) --> RR, quad z arrow.r.long.bar - ln abs(z) $
   il existe $a in DD$ tel que $f(a) < +infinity$. On applique le raisonnement précédent
   à la suite $(g_n = f_n compose psi)_(n in NN)$ où
   $
-    psi : DD(R) arrowTildeLong DD(R), quad z arrow.r.long.bar (R^(2)(z + a))/(R^(2) + overline(a)z) = R psi_(-a)(z / R).
+    psi : DD(R) arrowTildeLong DD(R), quad z arrow.r.long.bar (R^(2)(z + a))/(R^(2) + overline(a)z) = R psi_(-a slash R)(z / R).
   $
-  La fonction $psi_(-a)$ est définie à la @secSchwarzPick, et on y montre que c'est un automorphisme de $DD$ qui envoie $0$ sur $a$.
-  Cela conclut la preuve.
+  La fonction $psi_(-a slash R)$ est définie à la @secSchwarzPick, et on y montre que c'est un automorphisme de $DD$ qui 
+  envoie $0$ sur $a slash R$. Cela conclut la preuve.
 ]
 
 == Fonctions (sous)harmoniques sur une surface de Riemann
