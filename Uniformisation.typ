@@ -65,6 +65,11 @@ les notions suivantes.
   Le livre @bredon_topology_1993 est une excellente référence.
 
 Ces prérequis étant satisfaits, le texte qui suit est entièrement autonome.
+Cependant, il y a une exception à cette affirmation qui constitue selon moi
+la principale lacune de ce document. En effet, il y a à plusieurs endroits du texte
+un flou sur la régularité des chemins considérés. Je compte ajouter une section 
+concernant la régularisation des chemins, afin de rendre rigoureux les
+passages concernés.
 
 #outline()
 
