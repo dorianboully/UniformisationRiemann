@@ -1,5 +1,10 @@
 #import "lib/lib.typ": *
 
+// TODO : Ajouter une section sur la régularisation des chemins.
+// TODO : Déplacer l'étude de la famille d'automorphismes du
+// disque dans une sous section dédiée (au début de la première
+// partie). Mettre à jour les multiples références concernées.
+
 #show: mathdoc.with(
   title: [Fonctions harmoniques\ ---\ Théorème de Radó et  Uniformisation],
   author: "Dorian Boully",
