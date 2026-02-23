@@ -1,9 +1,6 @@
 #import "lib/lib.typ": *
 
 // TODO : Ajouter une section sur la régularisation des chemins.
-// TODO : Déplacer l'étude de la famille d'automorphismes du
-// disque dans une sous section dédiée (au début de la première
-// partie). Mettre à jour les multiples références concernées.
 
 #show: mathdoc.with(
   title: [Fonctions harmoniques\ ---\ Théorème de Radó et  Uniformisation],
@@ -141,6 +138,34 @@ On appelle équation de Cauchy-Riemann la condition @eqCauchy.
 On admet ici la théorie élémentaire des fonctions holomorphes. En particulier, on sait
 que les fonctions holomorphes sont $CC$-analytiques et vérifient la formule intégrale
 de Cauchy.
+
+=== Une famille d'automorphismes du disque <secAutomorphismesDisque>
+Dans toute la suite, on notera $DD(z, r) := {w in CC | abs(w - z) lt r}$ 
+le disque ouvert de centre $z$ et de rayon $r$, et $overline(DD)(z, r)$ son
+adhérence dans $CC$. Si $z = 0$, on se contentera d'écrire $DD(r) := DD(0, r)$,
+et on désigne également par $DD$ le disque unité ouvert.
+
+Dans ce paragraphe, on introduit et on étudie brièvement des automorphismes du disque qui envoient
+$0$ sur un point choisi arbitrairement. Nous les utiliserons à plusieurs
+reprises dans la suite comme reparamétrisation du disque.
+
+Considérons, $w in DD$ étant donné, l'application méromorphe
+$
+  phi_(w) : CC --> CC, quad z arrow.r.long.bar (z - w) / (1 - overline(w) z).
+$
+Si $w = 0$, ce n'est autre que l'identité. Sinon, elle induit un
+biholomorphisme de $CC without { overline(w)^(-1) }$ sur $CC without { - overline(w)^(-1) }$,
+d'inverse
+$
+  phi_(w)^(-1) = phi_(-w) : CC without { - overline(w)^(-1) } --> CC without { overline(w)^(-1) }, quad z arrow.r.long.bar (z + w) / (1 + overline(w) z).
+$
+L'application $phi_w$ est holomorphe au voisinage de $overline(DD)$ et pour tout $z in partial DD$,
+$ abs(phi_(w)(z)) = abs(z - w) / abs(1 - overline(w)z) = abs(z - w) / abs(overline(z - w)) = 1. $
+Par le principe du maximum, $psi_(w) := phi_(w)|_(DD)$ étant non constante, elle est à valeurs dans $DD$, et
+est donc un automorphisme de $DD$, qui vérifie
+$
+  psi_w (0) = w, quad psi_w (-w) = 0, quad (psi_w)'(0) = 1 - abs(w)^(2).
+$
 
 === Fonctions harmoniques dans $CC$
 
@@ -704,7 +729,7 @@ On note $ psi : DD^(*) --> RR, quad z arrow.r.long.bar - ln abs(z) $
   $
     psi : DD(R) arrowTildeLong DD(R), quad z arrow.r.long.bar (R^(2)(z + a))/(R^(2) + overline(a)z) = R psi_(-a slash R)(z / R).
   $
-  La fonction $psi_(-a slash R)$ est définie à la @secSchwarzPick, et on y montre que c'est un automorphisme de $DD$ qui 
+  La fonction $psi_(-a slash R)$ est définie à la @secAutomorphismesDisque, et on y montre que c'est un automorphisme de $DD$ qui 
   envoie $0$ sur $a slash R$. Cela conclut la preuve.
 ]
 
@@ -1220,20 +1245,6 @@ dans la @secRemplissagePieces.
   $
 ]<corSchwarzPick>
 
-Pour préparer la preuve, considérons, $w in DD$ étant donné, l'application méromorphe
-$
-  phi_(w) : CC --> CC, quad z arrow.r.long.bar (z - w) / (1 - overline(w) z).
-$
-Si $w = 0$, ce n'est autre que l'identité. Sinon, elle induit un
-biholomorphisme de $CC without { overline(w)^(-1) }$ sur $CC without { - overline(w)^(-1) }$,
-d'inverse
-$
-  phi_(w)^(-1) = phi_(-w) : CC without { - overline(w)^(-1) } --> CC without { overline(w)^(-1) }, quad z arrow.r.long.bar (z + w) / (1 + overline(w) z).
-$
-Elle est holomorphe au voisinage de $overline(DD)$ et pour tout $z in partial DD$,
-$ abs(phi_(w)(z)) = abs(z - w) / abs(1 - overline(w)z) = abs(z - w) / abs(overline(z - w)) = 1. $
-Par le principe du maximum, $psi_(w) := phi_(w)|_(DD)$ étant non constante, elle est à valeurs dans $DD$, et
-est donc un automorphisme de $DD$.
 
 #proof(title: [Démonstration du @corSchwarzPick])[
   Fixons $w in DD$ et considérons l'application holomorphe de $DD$ dans lui-même
@@ -1538,7 +1549,7 @@ courbe fermée de Jordan, ce qui rend la démonstration un peu fastidieuse.
   $
     psi(z) = (z + a) / (1 + overline(a) z).
   $
-  On a vu que c'est un biholomorphisme de $DD$ qui vérifie $psi(0) = a$ et $psi^(prime)(0) = 1 - abs(a)^(2)$.
+  On a vu à la @secAutomorphismesDisque que c'est un biholomorphisme de $DD$ qui vérifie $psi(0) = a$ et $psi^(prime)(0) = 1 - abs(a)^(2)$.
   On considère alors
   $ F : DD --> CC, quad z arrow.r.long.bar (f compose psi(z) - f(a)) / ((1 - abs(a)^(2))f^(prime)(a)), $
   de sorte que $F in cal(S)$. D'après le @thmBieberbach, on a
@@ -2318,7 +2329,7 @@ des pièces pleines de $X$ dont l'intérieur contient $a$, est non vide.
     phi_(a) : CC without { overline(a)^(-1) } --> CC without { - overline(a)^(-1) },
     quad z arrow.r.long.bar (z - a) / (1 - overline(a) z)
   $
-  introduit à la @secSchwarzPick. Alors $phi_a$ est bien définie sur $D$
+  introduit à la @secAutomorphismesDisque. Alors $phi_a$ est bien définie sur $D$
   et $phi_(a)(D) subset DD^(*)$. On peut donc relever $phi_(a)$ en une application holomorphe
   $psi : D --> DD^(*)$ telle que $psi^(2) = phi_(a)|_(D)$. On considère alors
   la composée
